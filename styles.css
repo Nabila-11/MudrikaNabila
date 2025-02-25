@@ -87,7 +87,7 @@ main h2 {
 }
 
 main h3 {   
-    text-align: center;
+    text-align: absolute;
     margin-bottom: 20px;
 }
 
