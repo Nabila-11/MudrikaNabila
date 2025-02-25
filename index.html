@@ -1,79 +1,52 @@
-<html>
-    <head>
-        <title>W3.CSS Template</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <meta charset="UTF-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Logo</title>
-    <style>
-        /* CSS untuk styling logo */
-        .logo {
-            width: 100px; /* Sesuaikan ukuran logo */
-            height: auto;
-        }
-
-        /* Posisikan logo di kiri atas halaman */
-        .logo-container {
-            position: absolute;
-            top: 20px; /* Sesuaikan jarak dari atas */
-            left: 20px; /* Sesuaikan jarak dari kiri */
-        }
-    </style>
-    </head>
+    <title>Website Sederhana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
 
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="logo-container">
-            <img src="img-usu.png" alt="Logo Website" class="logo">
-        </div>
-        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-            <a href="#home" class="w3-bar-item w3-button"><b>UNIVERSITAS SUMATERA UTARA</b> PERPUSTAKAAN DAN SAINS INFORMASI</a>
-            <!-- Float links to the right. Hide them on small screens -->
-            <div class="w3-right w3-hide-small">
-                <a href="#home" class="w3-bar-item w3-button">Home</a>
-                <a href="#about" class="w3-bar-item w3-button">About</a>
-                <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-            </div>
-        </div>
-    </div>
-
     <!-- Header -->
-    <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-        <div class="w3-display-middle w3-margin-top w3-center">
+    <header>
+        <div class="container">
+            <h1>Website Sederhana</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">About Me</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My Background</a></li>
+                            <li><a href="#">Skills</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Contact Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Phone</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Page content -->
-    <div class="w3-content w3-padding" style="max-width:1564px">
-
-        <!-- Contact Section -->
-        <div class="w3-container w3-padding-32" id="contact">
-            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-            <p>Lets get in touch and talk about your next project.</p>
-            <form action="/action_page.php" target="_blank">
-                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
-                <button class="w3-button w3-black w3-section" type="submit">
-                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                </button>
-            </form>
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h2>Welcome to My Website</h2>
+            <p>This is a simple website with a header, footer, and dropdown menus.</p>
         </div>
+    </main>
 
-        <!-- End page content -->
-    </div>
-
-    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-    <footer class="w3-center w3-black w3-padding-16">
-        <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
-    <!-- Footer end. -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Website. All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>
-
 </html>
-
