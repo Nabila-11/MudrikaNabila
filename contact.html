@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Perpustakaan Alifiah Fitri Ariani</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Warna latar belakang */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Memastikan footer di bagian bawah */
+        }
+        header {
+            background-color: #00796b; /* Warna header */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s; /* Transisi warna */
+        }
+        nav a:hover {
+            color: #ffeb3b; /* Warna saat hover */
+        }
+        .container {
+            max-width: 800px; /* Lebar maksimum kontainer */
+            margin: 20px auto; /* Pusatkan kontainer */
+            padding: 20px;
+            background-color: #ffffff; /* Warna latar belakang kontainer */
+            border-radius: 8px; /* Sudut melengkung */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+            flex: 1; /* Memungkinkan kontainer mengisi ruang yang tersedia */
+        }
+        h1 {
+            color: #004d40; /* Warna judul */
+            margin-bottom: 10px; /* Spasi bawah judul */
+        }
+        h2 {
+            color: #00796b; /* Warna subjudul */
+            margin-top: 20px; /* Spasi atas subjudul */
+            margin-bottom: 10px; /* Spasi bawah subjudul */
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #00796b; /* Warna tombol kirim */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Warna saat hover tombol */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #00796b; /* Warna footer */
+            color: white;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Hubungi Kami</h2>
+    <p>Kami ingin mendengar dari Anda! Jika Anda memiliki pertanyaan, saran, atau ingin mengetahui lebih lanjut tentang layanan kami, jangan ragu untuk menghubungi kami.</p>
+    <form action="#" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">No. HP:</label>
+        <input type="text" id="phone" name="phone" required>
+        
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <input type="submit" value="Kirim Pesan">
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 Perpustakaan Alifiah Fitri Ariani</p>
+</footer>
+
+</body>
+</html>
