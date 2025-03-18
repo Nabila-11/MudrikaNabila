@@ -64,8 +64,111 @@
         ul {
             margin-bottom: 15px; /* Spasi bawah daftar */
             padding-left: 20px; /* Indentasi untuk daftar */
+        @media (max-width:1200px){
+        html{font-size: 55%}
         }
-        footer {
+        @media (max-width:991px){
+        section{
+                padding:0 3%;
+                padding-top: 7.5rem;
+                padding-bottom: 2rem;
+               }
+        }
+
+    @media (max-width:768px){
+    
+      .landingPage{
+          flex-flow: column-reverse;
+      }
+    
+      .landingPage .image img{
+          width:100%;
+      }
+    
+      .landingPage .content h3{
+          font-size: 3.6rem;
+      }
+    
+      .landingPage .content p{
+          font-size: 1.5rem;
+      }
+      .listBook{
+          flex-flow: column-reverse;
+      }
+    
+    }
+      .landingPage{
+        margin-top: -80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        background:url(./img/Cover.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    @keyframes fade{
+    	0%{
+    		opacity: 0;
+    	}
+    	100%{
+    		opacity: 1;
+    	}
+    }
+    .card{
+        align-items: center;
+        border: 20px;
+        background-color: #ffc7f8;
+        margin: auto;
+        
+    }
+    .card1 {
+        border: brown;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 30px;
+          }
+          
+          .rounded-circle {
+            width: 60px;
+          }
+          
+          .breadcrumb-item a {
+            text-decoration: none;
+          }
+          
+    
+    .card2{
+      
+      margin: auto;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      background-color: #ffffff;
+    }
+    
+    .date{
+      font-size: 11px;
+      margin-bottom: 5px;
+    }
+    
+    .detaile{
+      margin-left: auto;
+    }
+    
+    
+    .cat{
+        align-items: right;
+    }
+    .far{
+      color: #76FDFF;
+    }
+    .btn{
+      text-align: center;
+      border-radius: 50px;
+      justify-content: center;
+    }
+        
+            footer {
             text-align: center;
             padding: 10px;
             background-color: #a52a2a; /* Warna footer */
