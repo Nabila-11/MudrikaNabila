@@ -154,49 +154,7 @@
             <li><b>Kerjasama Perpustakaan:</b> Anda dapat menemukan kerjasama yang kami lakukan dengan perpustakaan lain untuk meningkatkan aksesibilitas dan kualitas layanan perpustakaan. 
                 <P><a href="https://library.usu.ac.id/" target="_blank">Klik untuk melihat kerjasama perpustakaan.</a></P></li>
         </ul>
-
-        <h3>Selamat Belajar dan Menjelajahi Perpustakaan!</h3>
-    </section>
-</div>
-<section id="collection">
-        <h4>Koleksi Terbaru</h4>
-        <!-- Form Pencarian -->
-        <div id="search-bar">
-            <input type="text" id="search-input" placeholder="Cari judul buku...">
-            <button onclick="searchBooks()">Cari</button>
-        </div>
-    <script>
-        function searchBooks() {
-            let input = document.getElementById('search-input').value.toLowerCase();
-            let books = document.getElementsByClassName('book');
-
-            for (let i = 0; i < books.length; i++) {
-                let bookTitle = books[i].getElementsByTagName('p')[0].innerText.toLowerCase();
-                if (bookTitle.includes(input)) {
-                    books[i].style.display = '';
-                } else {
-                    books[i].style.display = 'none';
-                }
-            }
-        }
-    </script>
-        <!-- Daftar Buku -->
-        <div class="book-list" id="book-list">
-            <div class="book">
-                <img src="book1.jpg" style="border-radius: 20px;" class="card-img-top" alt="gambar tidak ditemukan">
-                <p>Kode HTML Untuk Belajar Kilat</p>
-            </div>
-            <div class="book">
-                <img src="book2.jpg" alt="Judul Buku 2">
-                <p>Judul Buku 2</p>
-            </div>
-            <div class="book">
-                <img src="book3.jpg" alt="Judul Buku 3">
-                <p>Judul Buku 3</p>
-            </div>
-        </div>
-    </section>
-    <!-- semua buku -->
+        <!-- semua buku -->
 <div class="container mt-5 mb-5 ">
   <div class="row">
     <div class="col-12 col-md-12 ">
@@ -372,6 +330,47 @@
       </div>
     </div>
   </div>
+        <h3>Selamat Belajar dan Menjelajahi Perpustakaan!</h3>
+    </section>
+</div>
+<section id="collection">
+        <h4>Koleksi Terbaru</h4>
+        <!-- Form Pencarian -->
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Cari judul buku...">
+            <button onclick="searchBooks()">Cari</button>
+        </div>
+    <script>
+        function searchBooks() {
+            let input = document.getElementById('search-input').value.toLowerCase();
+            let books = document.getElementsByClassName('book');
+
+            for (let i = 0; i < books.length; i++) {
+                let bookTitle = books[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+                if (bookTitle.includes(input)) {
+                    books[i].style.display = '';
+                } else {
+                    books[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+        <!-- Daftar Buku -->
+        <div class="book-list" id="book-list">
+            <div class="book">
+                <img src="book1.jpg" style="border-radius: 20px;" class="card-img-top" alt="gambar tidak ditemukan">
+                <p>Kode HTML Untuk Belajar Kilat</p>
+            </div>
+            <div class="book">
+                <img src="book2.jpg" alt="Judul Buku 2">
+                <p>Judul Buku 2</p>
+            </div>
+            <div class="book">
+                <img src="book3.jpg" alt="Judul Buku 3">
+                <p>Judul Buku 3</p>
+            </div>
+        </div>
+    </section>
       
 <footer>
     <p>&copy; 2025 Perpustakaan Mudrika Nabila
