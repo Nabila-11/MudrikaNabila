@@ -44,3 +44,9 @@ function searchBooks() {
 
 // Panggil fungsi displayBooks saat halaman dimuat
 window.onload = displayBooks;
+
+window.onload = function() {
+    // Tambahkan pesan selamat datang
+    const welcomeDiv = document.getElementById('welcomeMessage');
+    welcomeDiv.innerHTML = "Selamat Datang di Website Kami!";
+};
