@@ -46,7 +46,9 @@ function searchBooks() {
 window.onload = displayBooks;
 
 window.onload = function() {
-    // Tambahkan pesan selamat datang
+    // Temukan elemen dengan id "welcomeMessage"
     const welcomeDiv = document.getElementById('welcomeMessage');
-    welcomeDiv.innerHTML = "Selamat Datang di Website Kami!";
+
+    // Tampilkan pesan selamat datang
+    welcomeDiv.innerHTML = "Selamat Datang di Website Mudrika Nabila!";
 };
