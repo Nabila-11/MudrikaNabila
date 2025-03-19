@@ -1,0 +1,146 @@
+header {
+    background-color: #a52a2a; /* Warna header */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+nav {
+    position: center;
+    top: 20px;
+    right: 20px;
+}
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s; /* Transisi warna */
+}
+nav a:hover {
+    color: #ff4500; /* Warna saat hover */
+}
+
+.tulisan-berjalan {
+    background-color: #a52a2a;
+    border-radius: 8px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 24px; /* Ukuran font */
+    color: #f3f8ac; /* Warna teks */
+    animation: berjalan 7s linear forwards; /* Animasi berjalan selama 5 detik */
+}
+
+@keyframes berjalan {
+    0% { transform: translateX(100%); } /* Mulai dari luar layar (kanan) */
+    100% { transform: translateX(-100%); } /* Berakhir di luar layar (kiri) */
+}
+
+.container {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-width: 800px; /* Lebar maksimum kontainer */
+    margin: 20px auto; /* Pusatkan kontainer */
+    padding: 20px;
+    background-color: #ffffff; /* Warna latar belakang kontainer */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+    flex: 1; /* Memungkinkan kontainer mengisi ruang yang tersedia */
+}
+
+h1 {
+    color: #ffffff; /* Warna judul */
+    margin-bottom: 10px; /* Spasi bawah judul */
+}
+h2 {
+    color: #865e5e; /* Warna subjudul */
+    margin-top: 20px; /* Spasi atas subjudul */
+    margin-bottom: 10px; /* Spasi bawah subjudul */
+}
+h3 {
+    margin-top: 15px; /* Spasi atas untuk h3 */
+    margin-bottom: 5px; /* Spasi bawah untuk h3 */
+}
+
+h4 {
+    margin-top: 20px; /* Spasi atas untuk h4 */
+    margin-bottom: 5px; /* Spasi bawah untuk h4 */
+    text-align: left;
+    text-decoration-line: underline;
+}
+.btn.btn-primary {
+    font-size: 2em;
+    text-decoration: underline;
+    font-style:normal;
+}
+
+.date.text-center {
+    font-style: normal;
+    font-size: small;
+    text-align: left;
+}    
+
+.detaile {
+    font-style: normal;
+    font-size: small;
+    text-align: left;  
+}
+
+.card {
+    transition: transform 0.2s; /* Efek transisi saat hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Membesarkan card saat hover */
+}
+
+h5 {
+    margin-top: 15px; /* Spasi atas untuk h5 */
+    margin-bottom: 5px; /* Spasi bawah untuk h5 */
+    font-size: large;
+    font-display: script;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #a52a2a; /* Warna header tabel */
+    color: white;
+}
+
+form {
+    margin-top: 20px;
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button[type="submit"] {
+    background-color: #ff4500; /* Warna tombol kirim */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #ff4500; /* Warna saat hover tombol */
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #a52a2a; /* Warna footer */
+    color: white;
+    font-size: 1em;
+}
