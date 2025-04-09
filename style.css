@@ -27,6 +27,7 @@ nav a:hover {
     white-space: nowrap;
     font-size: 24px; /* Ukuran font */
     color: #f3f8ac; /* Warna teks */
+    text-align: center;
     animation: berjalan 7s linear forwards; /* Animasi berjalan selama 5 detik */
 }
 
@@ -92,11 +93,24 @@ h4 {
     transform: scale(1.05); /* Membesarkan card saat hover */
 }
 
+.event-container {
+    text-align: left;
+    margin: 20px;
+}
+.event-image {
+    width: 50%;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
 h5 {
     margin-top: 15px; /* Spasi atas untuk h5 */
     margin-bottom: 5px; /* Spasi bawah untuk h5 */
-    font-size: large;
-    font-display: script;
+    font-size: 50px;
+    color: #a52a2a;
+    text-align: center;
 }
 
 table {
