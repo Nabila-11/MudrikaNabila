@@ -5,19 +5,76 @@ header {
     text-align: center;
 }
 nav {
-    position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     top: 20px;
     right: 20px;
+    gap: 30px;
 }
 nav a {
     margin: 0 10px;
     color: white;
     text-decoration: none;
+    text-align: center;
     transition: color 0.3s; /* Transisi warna */
 }
 nav a:hover {
-    color: #ff4500; /* Warna saat hover */
+    color: #a52a2a; /* Warna saat hover */
 }
+.nav-link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    transition: background 0.2s;
+  }
+  .nav-link:hover {
+    background: #f0bbbbc7;
+  }
+  .nav-link .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    max-width: 220px;
+    background: #11111169;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 14px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110%;
+    z-index: 10;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: opacity 0.25s;
+    pointer-events: none;
+  }
+  .nav-link:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .nav-link .tooltip::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #111 transparent;
+  }
 
 .tulisan-berjalan {
     background-color: #a52a2a;
@@ -111,6 +168,111 @@ h5 {
     font-size: 50px;
     color: #a52a2a;
     text-align: center;
+}
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  background: rgba(104, 42, 42, 0.97);
+  color: #fff;
+  padding: 18px 10px 14px 10px;
+  z-index: 9999;
+  box-shadow: 0 -2px 12px rgba(104, 42, 42, 0.97);
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 0.6s;
+}
+@keyframes slideUp {
+  from { transform: translateY(100%);}
+  to { transform: translateY(0);}
+}
+.cookie-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.cookie-banner-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 14px;
+}
+.cookie-banner button {
+  border: none;
+  border-radius: 5px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.cookie-banner .accept {
+  background: #fff;
+  color: #000000;
+}
+.cookie-banner .manage {
+  background: #000000;
+  color: #fff;
+}
+.cookie-banner.hide {
+  display: none;
+}
+
+/* Modal Cookie */
+.cookie-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.45);
+  justify-content: center;
+  align-items: center;
+}
+.cookie-modal.active {
+  display: flex;
+}
+.cookie-modal-content {
+  background: #fff;
+  color: #a83232ab;
+  padding: 28px 32px 20px 32px;
+  border-radius: 10px;
+  max-width: 340px;
+  min-width: 240px;
+  text-align: left;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  animation: fadeIn 0.4s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95);}
+  to { opacity: 1; transform: scale(1);}
+}
+.cookie-modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.cookie-modal-content label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+  font-size: 1rem;
+}
+.cookie-modal-content button.save {
+  background: #a83232;
+  color: #fff;
+  margin-right: 10px;
+}
+.cookie-modal-content button.close {
+  background: #eee;
+  color: #a83232ab;
+}
+@media (max-width: 600px) {
+  .cookie-modal-content { max-width: 96vw; min-width: 0; padding: 16px 8px; }
 }
 
 table {

@@ -11,10 +11,19 @@
         <img src="logo.png" alt="Logo" width="80">
         <h1>Perpustakaan Mudrika Nabila</h1>
         <nav>
-            <a href="index.html">Homepage</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
+            <a href="index.html" class="nav-link">
+              Homepage
+              <span class="tooltip">Kembali ke halaman utama</span>
+            </a>
+            <a href="about.html" class="nav-link">
+              About Us
+              <span class="tooltip">Informasi tentang kami</span>
+            </a>
+            <a href="contact.html" class="nav-link">
+              Contact Us
+              <span class="tooltip">Hubungi kami</span>
+            </a>
+          </nav>
     </header>
     
     <div class="tulisan-berjalan"> <b>Selamat Datang di Perpustakaan Mudrika Nabila</b> 
@@ -53,9 +62,9 @@
                             <img src="pic2.jpg" class="card-img-top" alt="Laskar Pelangi">
                             <div class="card-body">
                                 <h4 class="card-title"><b>Laskar Pelangi</b></h4>
-                                <p class="card-text">Tahun rilis: November 1986.</p>
-                                <p class="card-text">The book is a comprehensive survey of structures and forms, written in clear modern English and illustrated with numerous examples.</p>
-                                <a href="https://drive.google.com/file/d/1bLIAERqJ1rLEaUT-4kg0F2gZkYFcgyVR/view?usp=drivesdk" class="btn btn-primary">Read</a>
+                                <p class="card-text">Tahun rilis: 2006.</p>
+                                <p class="card-text">Novel Laskar Pelangi, novel yang sangat inspiratif bagi yang punya kemampuan rasa buat menangkapnya.</p>
+                                <a href="https://drive.google.com/file/d/1bHY1ryBLxy5W-SSvJGdc4PV4TvVct3lW/view?usp=drivesdk" class="btn btn-primary">Read</a>
                             </div>
                         </div>
                     </div>
@@ -65,9 +74,21 @@
                             <img src="pic3.jpg" class="card-img-top" alt="Listen to My Heartbeat">
                             <div class="card-body">
                                 <h4 class="card-title"><b>Listen to My Heartbeat</b></h4>
-                                <p class="card-text">Tahun rilis: 2006.</p>
-                                <p class="card-text">Novel Laskar Pelangi, novel yang sangat inspiratif bagi yang punya kemampuan rasa buat menangkapnya.</p>
-                                <a href="https://drive.google.com/file/d/1bHY1ryBLxy5W-SSvJGdc4PV4TvVct3lW/view?usp=drivesdk" class="btn btn-primary">Read</a>
+                                <p class="card-text">Tahun rilis: 2017.</p>
+                                <p class="card-text">Novel ini mengambil tema remaja dengan permasalahan keluarga yang cukup berat. Sekarang ini, memang remaja mengalami masa-masa sulit dan keluarga sangat berpengaruh seperti yang dialami dari sisi Neo maupun Zaki. Neo dan Zaki sama-sama korban broken home.</p>
+                                <a href="https://drive.google.com/file/d/1blK-W268AQ5np-J8ebCDhtBiMB0-Y19Y/view?usp=drivesdk" class="btn btn-primary">Read</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="pic4.jpg" class="card-img-top" alt="Bumi Manusia">
+                            <div class="card-body">
+                                <h4 class="card-title"><b>Bumi Manusia</b></h4>
+                                <p class="card-text">Tahun rilis: Oktober 2002.</p>
+                                <p class="card-text">Bumi Manusia adalah buku pertama dari serangkaian roman empat jilid karya Pramoedya Ananta Toer melingkupi masa kejadian 1898 sampai 1918, masa periode kebangkitan nasional.</p>
+                                <a href="https://drive.google.com/file/d/1bwbk2GkKl_ucoL0Ypf-NjIb4cM1V0dCG/view?usp=drivesdk" class="btn btn-primary">Read</a>
                             </div>
                         </div>
                     </div>
@@ -89,6 +110,44 @@
         <button id="pauseButton" class="btn btn-danger">Jeda Suara</button>
 
         <h5><b>Selamat Menjelajahi Website Mudrika Nabila!</b></h5>
+        <!-- Tambahkan di akhir body HTML-mu -->
+        <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner-content">
+            <span>
+            Website ini menggunakan cookies untuk meningkatkan pengalaman Anda.
+            </span>
+            <div class="cookie-banner-actions">
+            <button class="accept" onclick="acceptCookie()">Terima</button>
+            <button class="manage" onclick="openCookieModal()">Kelola Cookie</button>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal Kelola Cookie -->
+        <div id="cookie-modal" class="cookie-modal">
+        <div class="cookie-modal-content">
+            <h3>Kelola Preferensi Cookie</h3>
+            <form id="cookieForm">
+            <label>
+                <span>Cookie Fungsional (wajib)</span>
+                <input type="checkbox" checked disabled>
+            </label>
+            <label>
+                <span>Cookie Analitik</span>
+                <input type="checkbox" id="analytics-cookie">
+            </label>
+            <label>
+                <span>Cookie Iklan</span>
+                <input type="checkbox" id="ads-cookie">
+            </label>
+            <div style="margin-top:18px;">
+                <button type="submit" class="save">Simpan</button>
+                <button type="button" class="close" onclick="closeCookieModal()">Batal</button>
+            </div>
+            </form>
+        </div>
+        </div>
+
     </div>
 
     <!-- Script JS -->
