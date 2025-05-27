@@ -3,54 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - PERPUSTAKAAN MUDRIKA NABILA</title>
+    <title>Contact Us - Perpustakaan Mudrika Nabila</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-
 <header>
-    <img src="logo.png" alt="Logo" width="80">
-    <h1>Contact Us</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="contact.html">
+                <img src="logo.png" alt="Logo" width="32" height="32" class="me-2">
+                Perpustakaan Mudrika Nabila
+            </a>
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                    <li>
+                        <a class="dropdown-item" href="index.html" data-bs-toggle="tooltip" title="Kembali ke halaman utama">
+                            <i class="bi bi-house-door"></i> Homepage
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="about.html" data-bs-toggle="tooltip" title="Informasi tentang kami">
+                            <i class="bi bi-info-circle"></i> About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="contact.html" data-bs-toggle="tooltip" title="Hubungi kami">
+                            <i class="bi bi-envelope"></i> Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>
 
+<section class="hero mb-3">
+    <div class="hero-content">
+        <div class="hero-title">Hubungi Kami</div>
+        <div class="hero-desc">
+            Silakan tinggalkan pesan, pertanyaan, atau saran Anda.
+        </div>
+    </div>
+</section>
+
 <div class="container">
-    <h2>Hubungi Kami</h2>
-    <p>Jika Anda memiliki pertanyaan, saran, atau ingin mengetahui lebih lanjut, silahkan meninggalkan pesan pada kolom dibawah ini.</p>
-    <!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/xblgdlnn"
-  method="POST"
->
-<label>
-  Your name:
-  <textarea name="name"></textarea>
-</label>
-<label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-    <label>
-    Subject:
-    <textarea name="subject"></textarea>
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+    <h2 class="mb-3">Hubungi Kami</h2>
+    <p>
+        Jika Anda memiliki pertanyaan, saran, atau ingin mengetahui lebih lanjut, silakan tinggalkan pesan pada kolom di bawah ini.
+    </p>
+    <form action="https://formspree.io/f/xblgdlnn" method="POST" class="mb-4">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nama Anda</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama Anda" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Anda</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="nama@email.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="subject" class="form-label">Subjek</label>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subjek pesan" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Pesan Anda</label>
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            <i class="bi bi-send"></i> Kirim
+        </button>
+    </form>
 </div>
 
-<footer>
+<footer class="mt-4">
     <p>&copy; 2025 Perpustakaan Mudrika Nabila</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

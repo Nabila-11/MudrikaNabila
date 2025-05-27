@@ -5,6 +5,11 @@ document.querySelectorAll('.btn-primary').forEach(button => {
     });
 });
 
+// Tooltip Bootstrap
+document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (el) {
+  new bootstrap.Tooltip(el);
+});
+
  // Membuat elemen menggunakan DOM
  const eventContainer = document.getElementById('eventContainer');
 
@@ -65,38 +70,6 @@ function setCookie(name, value, days) {
   }
   document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
-
-function getCookie(name) {
-  var nameEQ = name + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0;i < ca.length;i++) {
-    var c = ca[i];
-    while (c.charAt(0)==' ') c = c.substring(1,c.length);
-    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-  }
-  return null;
-}
-
-function acceptCookie() {
-  setCookie('cookieConsent', 'accepted', 365);
-  document.getElementById('cookie-banner').style.display = 'none';
-}
-
-window.onload = function() {
-  if (!getCookie('cookieConsent')) {
-    document.getElementById('cookie-banner').style.display = 'block';
-  }
-};
-
-function setCookie(name, value, days) {
-  var expires = "";
-  if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + (days*24*60*60*1000));
-    expires = "; expires=" + date.toUTCString();
-  }
-  document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-}
 function getCookie(name) {
   var nameEQ = name + "=";
   var ca = document.cookie.split(';');
@@ -141,3 +114,31 @@ window.onload = function() {
 document.getElementById('cookie-modal').onclick = function(e) {
   if (e.target === this) closeCookieModal();
 };
+
+// Forum Diskusi (local only, tidak reload halaman)
+document.addEventListener('DOMContentLoaded', function() {
+  const forumForm = document.getElementById('forumForm');
+  const forumInput = document.getElementById('forumInput');
+  const forumMessages = document.getElementById('forum-messages');
+
+  forumForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const pesan = forumInput.value.trim();
+    if (pesan.length === 0) return;
+
+    // Waktu lokal
+    const waktu = new Date();
+    const jam = waktu.getHours().toString().padStart(2,'0') + ':' + waktu.getMinutes().toString().padStart(2,'0');
+    const html = `
+      <div class="forum-message">
+        <span class="user"><i class="bi bi-person-circle"></i> Anda</span>
+        <span class="time">Hari ini, ${jam}</span>
+        <div>${pesan.replace(/</g,"&lt;").replace(/>/g,"&gt;")}</div>
+      </div>
+    `;
+    forumMessages.innerHTML += html;
+    forumInput.value = '';
+    forumInput.focus();
+    forumMessages.scrollTop = forumMessages.scrollHeight;
+  });
+});
